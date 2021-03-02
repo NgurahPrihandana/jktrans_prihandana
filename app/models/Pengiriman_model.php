@@ -54,9 +54,9 @@ class Pengiriman_model {
                         jumlah_pengiriman = :jumlah_pengiriman,
                         berat = :berat,
                         franco = :franco,
-                        confrankert, = :confrankert,
-                        penerima_barang, = :penerima_barang,
-                        keterangan, = :keterangan
+                        confrankert = :confrankert,
+                        penerima_barang = :penerima_barang,
+                        keterangan = :keterangan 
                         WHERE id_pengiriman = :id_pengiriman";
                         
             $this->db->query($query);
