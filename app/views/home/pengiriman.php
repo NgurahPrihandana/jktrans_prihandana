@@ -7,8 +7,8 @@
             <h6 class="h2 d-inline-block mb-0">Alternative</h6>
             <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
               <ol class="breadcrumb breadcrumb-links">
-                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                <li class="breadcrumb-item"><a href="<?=BASEURL?>/admin/index"><i class="fas fa-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="<?=BASEURL?>/admin/pengiriman">Pengiriman</a></li>
                 <!-- <li class="breadcrumb-item active" aria-current="page">Alternative</li> -->
               </ol>
             </nav>

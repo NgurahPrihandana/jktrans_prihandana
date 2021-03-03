@@ -11,6 +11,15 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  -->
+
+<?php 
+
+if (isset($_SESSION['status']) && $_SESSION['status'] == "login") {
+  header("Location: " . BASEURL . "/home/index");
+}
+
+?>
+
  <!DOCTYPE html>
 <html>
 
