@@ -42,6 +42,7 @@ if (!isset($_SESSION['status']) && $_SESSION['status'] != "login") {
     <link rel="stylesheet" href="<?=BASEURL?>/assets/vendor/datatables.net-select-bs4/css/select.bootstrap4.min.css">
     <!-- Argon CSS -->
     <link rel="stylesheet" href="<?= BASEURL ?>/assets/css/argon.css?v=1.1.0" type="text/css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>

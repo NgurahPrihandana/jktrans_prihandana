@@ -1,3 +1,4 @@
+<?php Flasher::flash()?>
   <!-- Header -->
   <div class="header pb-6">
       <div class="container-fluid">

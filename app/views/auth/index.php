@@ -38,9 +38,11 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == "login") {
   <link rel="stylesheet" href="<?=BASEURL?>/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="<?=BASEURL?>/assets/css/argon.css?v=1.1.0" type="text/css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body class="bg-default">
+<?php Flasher::flash()?>
   <!-- Main content -->
   <div class="main-content">
     <!-- Header -->
@@ -50,7 +52,7 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == "login") {
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
               <h1 class="text-white">Welcome!</h1>
-              <p class="text-lead text-white">Make A Wish & Jack Garment Login</p>
+              <p class="text-lead text-white">Jktrans Login by Prihandana</p>
             </div>
           </div>
         </div>
@@ -86,12 +88,6 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == "login") {
                     </div>
                     <input class="form-control" placeholder="Password" type="password" name="password">
                   </div>
-                </div>
-                <div class="custom-control custom-control-alternative custom-checkbox">
-                  <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                  <label class="custom-control-label" for=" customCheckLogin">
-                    <span class="text-muted">Remember me</span>
-                  </label>
                 </div>
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary my-4" name="login">Sign in</button>

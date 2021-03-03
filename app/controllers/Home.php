@@ -22,20 +22,20 @@ class Home extends Controller {
 
     public function tambah_pengiriman() {
         if($this->model('Pengiriman_model')->tambahPengiriman($_POST) > 0) {
-            Flasher::setFlash('berhasil','ditambahkan','success');
+            Flasher::setFlash('success','Tambah pengiriman sukses');
             header('Location: ' . BASEURL . '/home/pengiriman');
         } else {
-            Flasher::setFlash('gagal','dirubah','danger');
+            Flasher::setFlash('error','Tambah pengiriman gagal');
             header('Location: ' . BASEURL . '/home/pengiriman');
         }
     }
 
     public function hapus_pengiriman($id) {
         if($this->model("Pengiriman_model")->hapusPengiriman($id) > 0) {
-            Flasher::setFlash('berhasil','ditambahkan','success');
+            Flasher::setFlash('success','Delete pengiriman sukses');
             header('Location: ' . BASEURL . '/home/pengiriman');
         } else {
-            Flasher::setFlash('gagal','dirubah','danger');
+            Flasher::setFlash('error','Delete pengiriman gagal');
             header('Location: ' . BASEURL . '/home/pengiriman');
         }
     }
@@ -52,10 +52,10 @@ class Home extends Controller {
 
     public function update() {
         if($this->model('Pengiriman_model')->updatePengiriman($_POST) > 0) {
-            Flasher::setFlash('berhasil','ditambahkan','success');
+            Flasher::setFlash('success','Update pengiriman sukses');
             header('Location: ' . BASEURL . '/home/pengiriman');
         } else {
-            Flasher::setFlash('berhasil','ditambahkan','success');
+            Flasher::setFlash('error','Update pengiriman gagal');
             header('Location: ' . BASEURL . '/home/pengiriman');
         }
     }

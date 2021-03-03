@@ -35,13 +35,14 @@
                     $_SESSION['nama'] = $nama;
                     $_SESSION['username'] = $username;
                     $_SESSION['status'] = 'login';
+                    Flasher::setFlash('success','Login sukses');
                     header('Location: '.BASEURL.'/admin/index');
                 }else{
-                    Flasher::setFlash('Username / Password', 'Salah','danger');
+                    Flasher::setFlash('error','Username atau password salah');
                     header('Location: '.BASEURL.'/auth/index');
                 }
             } else {
-                Flasher::setFlash('Username / Password', 'Salah','danger');
+                Flasher::setFlash('error','Username atau password salah');
                 header('Location: '.BASEURL.'/auth/index');
             }
         }   else {

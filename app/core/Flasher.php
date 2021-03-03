@@ -1,24 +1,27 @@
 <?php
 
 class Flasher {
-    public static function setFlash($pesan,$aksi,$tipe)
+    public static function setFlash($icon,$title)
     {
         $_SESSION['flash'] = [
-            'pesan' => $pesan,
-            'aksi' => $aksi,
-            'tipe' => $tipe
+            'icon' => $icon,
+            'title' => $title
         ];
     }
 
     public static function flash()
     {
         if( isset($_SESSION['flash'])) {
-            echo '<div class="alert alert-' .$_SESSION['flash']['tipe']. ' alert-dismissible fade show" role="alert">
-                    Data <strong>' .$_SESSION['flash']['pesan']. '</strong> ' .$_SESSION['flash']['aksi']. '
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>';
+            echo '<script>
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "'. $_SESSION['flash']['icon'] .'",
+                        title: "'. $_SESSION['flash']['title'] .'",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    </script>
+                    ';
             unset($_SESSION['flash']);
         }
     }
