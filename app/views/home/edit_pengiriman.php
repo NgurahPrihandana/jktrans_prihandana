@@ -42,7 +42,7 @@
                               </div>
                               <div class="col-lg-6">
                                   <div class="form-group">
-                                      <label class="form-control-label" for="exampleFormControlInput1">Jumlah Pengiriman</label>
+                                      <label class="form-control-label" for="exampleFormControlInput1">Colli / Jumlah Pengiriman</label>
                                       <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Input kode pengiriman..." value="<?=$data['getSpcPengiriman']['jumlah_pengiriman']?>" name="jumlah_pengiriman">
                                   </div>
                               </div>
@@ -77,8 +77,7 @@
                               <label class="form-control-label" for="exampleFormControlInput1">Keterangan</label>
                               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="keterangan"><?=$data['getSpcPengiriman']['keterangan']?></textarea>
                           </div>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Add Data</button>
+                          <button type="submit" class="btn btn-primary">Update Data</button>
                       </form>
                   </div>
               </div>

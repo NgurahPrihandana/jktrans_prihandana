@@ -2,11 +2,14 @@
 
 class Home extends Controller {
     public function index() {
+        $data['pengiriman'] = $this->model("Pengiriman_model")->getAllPengiriman();
+        $data['jumlah_lunas'] =$this->model("Pengiriman_model")->getAllLunas();
+        $data['jumlah_belum_lunas'] =$this->model("Pengiriman_model")->getAllBelumLunas();
         $data['set_active'] = "index";
         $this->view('home/layouts/header');
         $this->view('home/layouts/navbar',$data);
         $this->view('home/layouts/topnav');
-        $this->view('home/index');
+        $this->view('home/index',$data);
         $this->view('home/layouts/footer');
     }
 

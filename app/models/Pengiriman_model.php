@@ -15,6 +15,16 @@ class Pengiriman_model {
         return $this->db->resultSet();
     }
 
+    public function getAllLunas() {
+        $this->db->query("SELECT 8 FROM $this->tabel WHERE `franco` = 'true'");
+        return $this->db->resultSet();
+    }
+
+    public function getAllBelumLunas() {
+        $this->db->query("SELECT 8 FROM $this->tabel WHERE `franco` = 'false'");
+        return $this->db->resultSet();
+    }
+
     public function getSpcPengiriman($id) {
         $this->db->query("SELECT * FROM $this->tabel WHERE id_pengiriman = :id");
         $this->db->bind('id',$id);

@@ -35,7 +35,7 @@
                 <tr>
                   <th>No</th>
                   <th>S. P.</th>
-                  <th>Colli</th>
+                  <th>Colli / Jumlah Pengiriman</th>
                   <th>Berat Pengiriman</th>
                   <th>Franco</th>
                   <th>Confrankert</th>
@@ -48,7 +48,7 @@
                 <tr>
                   <th>No</th>
                   <th>S. P.</th>
-                  <th>Colli</th>
+                  <th>Colli / Jumlah Pengiriman</th>
                   <th>Berat Pengiriman</th>
                   <th>Franco</th>
                   <th>Confrankert</th>
@@ -58,15 +58,15 @@
                 </tr>
               </tfoot>
               <tbody>
-                <?php foreach ($data['pengiriman'] as $index => $value) : ?>
                   <?php $i = 1 ?>
+                <?php foreach ($data['pengiriman'] as $index => $value) : ?>
                   <tr>
                     <td><?= $i ?></td>
                     <td><?= $value['kode_pengiriman'] ?></td>
                     <td><?= $value['jumlah_pengiriman'] ?></td>
-                    <td><?= $value['berat'] ?></td>
+                    <td><?= $value['berat'] ?> Kg</td>
                     <td><?= $value['franco'] == "true" ? "Sudah lunas" : "Belum lunas" ?></td>
-                    <td><?= $value['confrankert'] ?></td>
+                    <td>Rp. <?= $value['confrankert'] ?>,00</td>
                     <td><?= $value['penerima_barang'] ?></td>
                     <td><?= $value['keterangan'] ?></td>
                     <td><a href="<?= BASEURL ?>/home/edit_pengiriman/<?= $value['id_pengiriman'] ?>" class="btn btn-facebook text-white btn-icon-only btn-sm">
